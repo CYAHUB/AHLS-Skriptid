@@ -1,3 +1,4 @@
+#!/bin/bash
 
 APACHE2=$(dpkg-query -W -f='${Status}' apache2 2>/dev/null | grep -c 'ok installed')
 if [ $APACHE2 -eq 0 ]; then
