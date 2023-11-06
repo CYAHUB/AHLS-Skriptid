@@ -1,5 +1,5 @@
 ---
-- hosts: web
+- hosts: webservers
   tasks:
   - name: Loome Allalaadimise kataloogi
     file:

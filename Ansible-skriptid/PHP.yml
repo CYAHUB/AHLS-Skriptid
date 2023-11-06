@@ -1,5 +1,5 @@
 ---
-- hosts: web
+- hosts: webservers
   tasks:
     - name: Installerime php uuema
       apt: name=php update_cache=yes state=latest

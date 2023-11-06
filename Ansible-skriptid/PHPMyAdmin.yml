@@ -1,6 +1,6 @@
 
 ---
-- hosts: web
+- hosts: webservers
   tasks:
     - name: PHPMyAdmin webserver 'Apache2'
       debconf: name=phpmyadmin question='phpmyadmin/reconfigure-webserver' value='apache2' vtype='multiselect'

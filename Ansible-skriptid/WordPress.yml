@@ -1,5 +1,5 @@
 ---
-- hosts: web
+- hosts: webservers
   tasks:
     - name: Loome andmebaasi WordPressi jaoks
       mysql_db:
