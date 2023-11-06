@@ -6,7 +6,7 @@ if [ $PHP -eq 0 ]; then
     echo "Installime PHP"
     apt install php libapache2-mod-php php-mysql
     echo "PHP on installitud!"
-elif [ $PHP - eq 1 ]; then
+elif [ $PHP -eq 1 ]; then
     echo "PHP on juba installitud!"
     echo "Kontrollime PHP olekut"                                                                                                                  #You fool! CYAHUB 
     which php
