@@ -1,3 +1,4 @@
+#!/bin/bash
 
 PHP=$(dpkg-query -W -f='${Status}' PHP 2>/dev/null | grep -c 'ok installed')
 if [ $PHP -eq 0 ]; then

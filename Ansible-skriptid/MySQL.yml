@@ -1,0 +1,46 @@
+---
+- hosts: web
+  tasks:
+  - name: Loome Allalaadimise kataloogi
+    file:
+      path=/root/allalaadimised
+      owner=root
+      group=root
+      mode=0755
+      state=directory
+
+  - name: Laeme alla mysql-serverist repo faili
+    get_url:
+      url: https://repo.mysql.com/mysql-apt-config_0.8.26-1_all.deb
+      dest: "/root/allalaadimised"
+      mode: 0440
+
+  - name: Installeerime mysql repo
+    apt: "deb=/root/allalaadimised/mysql-apt-config_0.8.26-1_all.deb"
+
+  - name: Installeerime mysql
+    apt: name=mysql-server update_cache=yes state=present
+
+  - name: Loome root login faili
+    copy:
+      dest: /root/.my.cnf
+      owner: root
+      group: root
+      mode: 0600
+      content: |
+        [client]
+        user=root
+        password=qwerty
+
+  - name: Loome kasutaja parooliga koos kõikide õigustega
+    mysql_user:
+      name: root
+      password: qwerty
+      login_user: root
+      login_password: qwerty
+      priv: '*.*:ALL,GRANT'
+      state: present
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+
+  - name: Teeme taaskäivituse mysql-ile
+    service: name=mysql state=restarted

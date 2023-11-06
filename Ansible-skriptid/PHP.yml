@@ -1,0 +1,11 @@
+---
+- hosts: web
+  tasks:
+    - name: Installerime php uuema
+      apt: name=php update_cache=yes state=latest
+
+    - name: Installerime libapache-mod-php uuema
+      apt: name=libapache2-mod-php update_cache=yes state=latest
+
+    - name: Installeeime php-mysql uuema
+      apt: name=php-mysql update_cache=yes state=latest

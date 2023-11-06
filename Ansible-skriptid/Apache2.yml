@@ -1,0 +1,32 @@
+---
+- hosts: web
+  tasks:
+    - name: install apache2
+      apt: name=apache2 update_cache=yes state=latest
+
+    - name: Loome public_html kataloog user'ile
+      file:
+       path=/home/martin/public_html
+       owner=martin
+       group=martin
+       mode=0755
+       state=directory
+
+    - name: Lubame veebiserveritel userdir_mod
+      apache2_module: name=userdir
+
+    - name: Apache2 serverile alglaadimine(restart)
+      service:
+        name: apache2
+        state: restarted
+
+    - name: Kopeerime index.html fail kasutajale kodus_public_html kataloogi
+      copy:
+        src: /var/www/html/index.html
+        dest: /home/martin/public_html/
+        remote_src: yes
+        owner: martin
+        group: martin
+
+    - name: martin index.html redigeerimine
+      lineinfile: dest=/home/martin/public_html/index.html regexp="Apache2 Ubuntu Default Page It works" line="Martini lehekülg" state=present
