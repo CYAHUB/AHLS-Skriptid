@@ -9,7 +9,7 @@ Ma ei vastuta, kui need skriptid ei tööta teistes arvutites.
 ### [Ansible Skriptid]
 
 * [__Apache2.yml__](https://github.com/CYAHUB/AHLS-Skriptid/blob/main/Ansible-skriptid/Apache2.yml) 
-- Skript paigaldab paketi apache2, loob user'ile kataloog "public_html" ning lisab kataloogile "userdir" mod'i. Lisaks kopeerib index.html faili kasutaja oma "public_html" kataloogi. Ja lõppude lõpuks muudab index.html faili, mis on kasutaja kataloogis sees, midagi oma pärast.
+Skript paigaldab paketi apache2, loob user'ile kataloog "public_html" ning lisab kataloogile "userdir" mod'i. Lisaks kopeerib index.html faili kasutaja oma "public_html" kataloogi. Ja lõppude lõpuks muudab index.html faili, mis on kasutaja kataloogis sees, midagi oma pärast.
 
 * [__PHP.yml__](https://github.com/CYAHUB/AHLS-Skriptid/blob/main/Ansible-skriptid/PHP.yml)
 - Skript paigaldab kõige stabiilsema ja uuema PHP. Lisaks loob phpinfo.php faili ka. 
