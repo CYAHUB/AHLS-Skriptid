@@ -1,11 +1,16 @@
 ---
 - hosts: webservers
   tasks:
-    - name: Installerime php uuema
+    - name: Installeerime php uuema
       apt: name=php update_cache=yes state=latest
 
-    - name: Installerime libapache-mod-php uuema
+    - name: Installeerime libapache-mod-php uuema
       apt: name=libapache2-mod-php update_cache=yes state=latest
 
-    - name: Installeeime php-mysql uuema
+    - name: Installeerime php-mysql uuema
       apt: name=php-mysql update_cache=yes state=latest
+
+    - name: Loome phpinfo.php faili
+        copy:
+          content: "<?php phpinfo(); ?>"
+          dest: /var/www/html/phpinfo.php
