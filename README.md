@@ -7,9 +7,9 @@ Ma ei vastuta, kui need skriptid ei tööta teistes arvutites.
 * Skriptid ja playbookid on kohustatud käivitada **`root`**-ina.
 
 # Kuidas skripte tööle panna?
-* Ansible --> **"ansible-playbook asukoht/skript.yml"**
-* Bash --> **"sh asukoht/skript.sh"** või(Peab olema lubatud õiguseks +x kui ei, siis all pool on skript) **"asukoht/skript.sh"** või(ainult siis kui oled samas kohas kui on skript) **"./skript.sh"**
-* Annab tervele kausta sees failidele õigused **"chmod +x *"** või **"chmod +x *.sh"** mis ainult annab õigused .sh lõpuka failid.
+* Ansible --> **`ansible-playbook asukoht/skript.yml`**
+* Bash --> **`sh asukoht/skript.sh`** või(Peab olema lubatud õiguseks +x kui ei, siis all pool on skript) **`asukoht/skript.sh`** või(ainult siis kui oled samas kohas kui on skript) **`./skript.sh`**
+* Annab tervele kausta sees failidele õigused **`chmod +x *`** või **`chmod +x *.sh`** mis ainult annab õigused .sh lõpuka failid.
 
 # Kaustad
 * [__Ansible-skriptid__](https://github.com/CYAHUB/AHLS-Skriptid/tree/main/Ansible-skriptid) - Siin on Ansible kaust.
@@ -40,7 +40,6 @@ Ma ei vastuta, kui need skriptid ei tööta teistes arvutites.
 
 * [__WordPress_Installimine.sh__](https://github.com/CYAHUB/AHLS-Skriptid/blob/main/Bash-skriptid/WordPress_Installimine.sh) - Skript kontrollib, kas on olemas kaust nimega "wordpress". Kui ei, siis küsitakse "wordpress"-i andmebaasi kasutajalt parooli, ning tehakse andmebaas. Siis installitakse "Wordpress". Peale seda konfigureeritakse andmebaasi. Lõppude lõpuks, skript teeb restarti "Apache2".
 
-# Lisa info
 
-* Wordpressi kodulehekülg on kas "xxx.xxx.xxx.xxx/wordpress" või "example.com/wordpress"
-* PHPMyAdmin kodulehekülg on kas "xxx.xxx.xxx.xxx/phpmyadmin" või "example.com/phpmyadmin"
+* Wordpressi kodulehekülg on kas **`xxx.xxx.xxx.xxx/wordpress`** või **`example.com/wordpress`**
+* PHPMyAdmin kodulehekülg on kas **`xxx.xxx.xxx.xxx/phpmyadmin`** või **`example.com/phpmyadmin`**
