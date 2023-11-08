@@ -10,7 +10,10 @@
     - name: Installeerime php-mysql uuema
       apt: name=php-mysql update_cache=yes state=latest
 
+    - name: Installime python3-pymysql ansible jaoks
+      apt: name=python3-pymysql update_cache=yes state=latest
+
     - name: Loome phpinfo.php faili
-        copy:
-          content: "<?php phpinfo(); ?>"
-          dest: /var/www/html/phpinfo.php
+      copy:
+        content: "<?php phpinfo(); ?>"
+        dest: /var/www/html/phpinfo.php
