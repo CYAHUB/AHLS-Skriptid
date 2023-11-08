@@ -7,9 +7,9 @@ Ma ei vastuta, kui need skriptid ei tööta teistes arvutites.
 * Skriptid ja playbookid on kohustatud käivitada **`root`**-ina.
 
 # Kuidas skripte tööle panna?
-* Ansible --> "ansible-playbook "asukoht/skript.yml"
-* Bash --> "sh asukoht/skript.sh" või(Sul peab olema siis lubatud õiguseks vähemalt +x kui ei siis all pool on skript) "asukoht/skript.sh" või(ainult siis kui oled samas kohas kui on skript) "./skript.sh"
-* Annab tervele kausta sees failidele õigused "chmod +x *" või "chmod +x *.sh" mis ainult annab õigused .sh lõpuka failid.
+* Ansible --> **"ansible-playbook asukoht/skript.yml"**
+* Bash --> **"sh asukoht/skript.sh"** või(Peab olema lubatud õiguseks +x kui ei, siis all pool on skript) **"asukoht/skript.sh"** või(ainult siis kui oled samas kohas kui on skript) **"./skript.sh"**
+* Annab tervele kausta sees failidele õigused **"chmod +x *"** või **"chmod +x *.sh"** mis ainult annab õigused .sh lõpuka failid.
 
 # Kaustad
 * [__Ansible-skriptid__](https://github.com/CYAHUB/AHLS-Skriptid/tree/main/Ansible-skriptid) - Siin on Ansible kaust.
