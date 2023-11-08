@@ -1,6 +1,16 @@
 # Hoiatus
-Palun kasuta Ubuntu 22.04 LTS või sarnast versiooni.
+* Palun kasuta Ubuntu 22.04 LTS või sarnast versiooni.
 Ma ei vastuta, kui need skriptid ei tööta teistes arvutites.
+
+* Masina peab olema kasutaja vähemalt **`Martin`**.
+* Kõikides masinates peab olema **`root`** sissepääs igasse masinasse(vähemalt Ansible).
+* Skriptid ja playbookid on kohustatud käivitada **`root`**-ina.
+
+# Kuidas skripte tööle panna?
+* Ansible --> "ansible-playbook "asukoht/skript.yml"
+* Bash --> "sh asukoht/skript.sh" või(Sul peab olema siis lubatud õiguseks vähemalt +x kui ei siis all pool on skript) "asukoht/skript.sh" või(ainult siis kui oled samas kohas kui on skript) "./skript.sh"
+* Annab tervele kausta sees failidele õigused "chmod +x *" või "chmod +x *.sh" mis ainult annab õigused .sh lõpuka failid.
+
 # Kaustad
 * [__Ansible-skriptid__](https://github.com/CYAHUB/AHLS-Skriptid/tree/main/Ansible-skriptid) - Siin on Ansible kaust.
 
@@ -29,3 +39,8 @@ Ma ei vastuta, kui need skriptid ei tööta teistes arvutites.
 * [__PHPMyAdmin_Installimine.sh__](https://github.com/CYAHUB/AHLS-Skriptid/blob/main/Bash-skriptid/PHPMyAdmin_Installimine.sh) - Skript kontrollib, kas on olemas "PHPMyAdmin". Kui ei, siis installib "PHPMyAdmin". Kui on olemas siis annab märku, et on olemas rohkem ei pea midagi tegema.
 
 * [__WordPress_Installimine.sh__](https://github.com/CYAHUB/AHLS-Skriptid/blob/main/Bash-skriptid/WordPress_Installimine.sh) - Skript kontrollib, kas on olemas kaust nimega "wordpress". Kui ei, siis küsitakse "wordpress"-i andmebaasi kasutajalt parooli, ning tehakse andmebaas. Siis installitakse "Wordpress". Peale seda konfigureeritakse andmebaasi. Lõppude lõpuks, skript teeb restarti "Apache2".
+
+# Lisa info
+
+* Wordpressi kodulehekülg on kas "xxx.xxx.xxx.xxx/wordpress" või "example.com/wordpress"
+* PHPMyAdmin kodulehekülg on kas "xxx.xxx.xxx.xxx/phpmyadmin" või "example.com/phpmyadmin"
