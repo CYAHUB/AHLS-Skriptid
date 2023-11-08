@@ -40,6 +40,7 @@ Ma ei vastuta, kui need skriptid ei tööta teistes arvutites.
 
 * [__WordPress_Installimine.sh__](https://github.com/CYAHUB/AHLS-Skriptid/blob/main/Bash-skriptid/WordPress_Installimine.sh) - Skript kontrollib, kas on olemas kaust nimega "wordpress". Kui ei, siis küsitakse "wordpress"-i andmebaasi kasutajalt parooli, ning tehakse andmebaas. Siis installitakse "Wordpress". Peale seda konfigureeritakse andmebaasi. Lõppude lõpuks, skript teeb restarti "Apache2".
 
+### Lisa info
 
 * Wordpressi kodulehekülg on kas **`xxx.xxx.xxx.xxx/wordpress`** või **`example.com/wordpress`**
 * PHPMyAdmin kodulehekülg on kas **`xxx.xxx.xxx.xxx/phpmyadmin`** või **`example.com/phpmyadmin`**
